@@ -28,7 +28,7 @@ const degrees = [
 const DegreeComponent = ({ degree }) => {
     return (
         <Box w="100%" my={2} px={8} py={5}>
-            <Stack shadow="xl" direction={['column', 'column', 'row']} spacing={5} w="100%">
+            <Stack shadow="xl" rounded="xl" p={4} direction={['column', 'column', 'row']} spacing={5} w="100%">
                 <Center w={["100%", "100%", "40%", "30%"]}>
                     <Image src={degree.image} alt={degree.name} w={200} h={200} />
                 </Center>
@@ -37,9 +37,9 @@ const DegreeComponent = ({ degree }) => {
 
                     <Stack direction={['column', 'column', 'column', 'row']} spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} rounded="lg">
                         <Stack w={["100%", "100%", "100%", "50%"]} direction="column">
-                            <Text fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]} align={["center", "center", "left"]}>{degree.name}</Text>
+                            <Text fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]} align={["center", "center", "center", "left"]}>{degree.name}</Text>
 
-                            <Text fontWeight="bold" fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} align={["center", "center", "left"]}>{degree.degree}</Text>
+                            <Text fontWeight="bold" fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} align={["center", "center", "center", "left"]}>{degree.degree}</Text>
                         </Stack>
 
                         <Stack w={["100%", "100%", "100%", "50%"]} direction={['row', 'row', 'row','column']}>
@@ -49,7 +49,7 @@ const DegreeComponent = ({ degree }) => {
                         </Stack>
                     </Stack>
 
-                    <List pr={4} fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900">
+                    <List fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900">
                         {degree.description.map((desc) => (
                             <ListItem key={desc}>
                                 <ListIcon as={Arrow} />
@@ -58,7 +58,7 @@ const DegreeComponent = ({ degree }) => {
                         ))}
                     </List>
 
-                    <Box w="100%" pr={4} pb={4} align="right">
+                    <Box w="100%" align="right">
                         <Link href={degree.website} isExternal>
                             <Button p={[3, 3, 5, 6]} bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
                                 <HStack>
@@ -76,7 +76,7 @@ const DegreeComponent = ({ degree }) => {
 
 export default function Skills() {
     return (
-        <VStack>
+        <VStack spacing={0}>
             <Text fontFamily="paytone" fontSize={["2xl", "2xl", "3xl", "4xl"]} color="blue.900">
                 Degrees
             </Text>

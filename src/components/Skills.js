@@ -8,27 +8,60 @@ const skills = [
     {
         image: pic,
         title: "Full Stack Developer",
-        icons: [ <Github />, <Linkedin />], 
+        icons: [<Github />, <Linkedin />],
         description: ["Developing web applications", "Developing mobile applications"]
     },
     {
         image: pic,
         title: "Mobile Developer",
-        icons: [ <Github />, <Linkedin />], 
+        icons: [<Github />, <Linkedin />],
         description: ["Developing mobile applications"]
     }
 ]
 
-const SkillComponent = ({skill}) => {
+// const SkillComponent = ({skill}) => {
+//     return (
+//         <Box w="100%" px={8} py={4}>
+//             <Stack direction={['column', 'column', 'row']} spacing={4} border="2px" borderRadius="lg" borderColor="blue.900" p={8} w="100%">
+//                 <Center w={["100%", "100%", "40%", "30%"]}>
+//                     <Image src={skill.image} alt={skill.title} w={200} h={200} />
+//                 </Center>
+
+//                 <Stack spacing={4} w={["100%", "100%", "60%", "70%"]}>
+//                     <Text align={["center", "center", "left"]} fontFamily="paytone" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">{skill.title}</Text>
+
+//                     <HStack spacing={4}>
+//                         {skill.icons.map((icon) => (
+//                             icon
+//                         ))}
+//                     </HStack>
+
+//                     <List fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900">
+//                         {skill.description.map((desc) => (
+//                             <ListItem key={desc}>
+//                                 <ListIcon as={Arrow} />
+//                                 {desc}
+//                             </ListItem>
+//                         ))}
+//                     </List>
+//                 </Stack>
+//             </Stack >
+//         </Box >
+//     )
+// }
+
+const SkillComponent = ({ skill }) => {
     return (
-        <Box w="100%" px={8} py={4}>
-            <Stack direction={['column', 'column', 'row']} spacing={4} border="2px" borderRadius="lg" borderColor="blue.900" p={8} w="100%">
+        <Box w="100%" my={2} px={8} py={5}>
+            <Stack shadow="xl" rounded="xl" p={4} direction={['column', 'column', 'row']} spacing={5} w="100%">
                 <Center w={["100%", "100%", "40%", "30%"]}>
-                    <Image src={skill.image} alt={skill.title} w={200} h={200} />
+                    <Image src={skill.image} alt={skill.name} w={200} h={200} />
                 </Center>
 
-                <Stack spacing={4} w={["100%", "100%", "60%", "70%"]}>
-                    <Text align={["center", "center", "left"]} fontFamily="paytone" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">{skill.title}</Text>
+                <Stack spacing={4} w={["100%", "100%", "60%", "70%"]} >
+                    <Box direction={['column', 'column', 'column', 'row']} spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} rounded="lg">
+                        <Text fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]} align={["center", "center", "center", "left"]}>{skill.title}</Text>
+                    </Box>
 
                     <HStack spacing={4}>
                         {skill.icons.map((icon) => (
@@ -45,6 +78,7 @@ const SkillComponent = ({skill}) => {
                         ))}
                     </List>
                 </Stack>
+
             </Stack >
         </Box >
     )
@@ -57,9 +91,11 @@ export default function Skills() {
                 Interests and Skills
             </Text>
 
-            {skills.map((skill, index) => (
-                <SkillComponent key={index} skill={skill} />
-            ))}
+            {
+                skills.map((skill, index) => (
+                    <SkillComponent key={index} skill={skill} />
+                ))
+            }
         </VStack>
     )
 }
