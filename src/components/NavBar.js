@@ -1,5 +1,5 @@
 import React from "react"
-import { Link as RouteLink } from "react-router-dom"
+import { NavLink as RouteLink } from "react-router-dom"
 import { Link, Box, Flex, Text, Stack } from "@chakra-ui/react"
 import Logo from "./Logo"
 
@@ -11,7 +11,7 @@ const NavBar = (props) => {
   return (
     <NavBarContainer {...props}>
       <Logo
-        w="180px"
+        w="250px"
         color={["white", "white", "blue.900", "blue.900"]}
         fontSize="3xl"
       />
@@ -22,7 +22,7 @@ const NavBar = (props) => {
 };
 
 const CloseIcon = () => (
-  <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+  <svg cursor="pointer" width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <title>Close</title>
     <path
       fill="white"
@@ -33,6 +33,7 @@ const CloseIcon = () => (
 
 const MenuIcon = () => (
   <svg
+    cursor="pointer"
     width="24px"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
@@ -53,18 +54,21 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, to = "/", ...rest }) => {
   return (
-    <RouteLink to={to}>
-      <Link>
-        <Text
-          _hover={[{ bg: "white", textColor: "blue.900" }, { bg: "white", textColor: "blue.900" }, { bg: "blue.900", textColor: "white" }]}
-          _active={[{ bg: "white", textColor: "blue.900" }, { bg: "white", textColor: "blue.900" }, { bg: "blue.900", textColor: "white" }]}
-          p={[3, 3, 3, 5]}
-          borderRadius="lg"
-          display="block" {...rest}>
-          {children}
-        </Text>
-      </Link>
-    </RouteLink>
+    <Link
+      as={RouteLink}
+      to={to}
+      _hover={{ bg: "blue.900", textColor: "white" }}
+      _after={{ bg: "blue.900", textColor: "white" }}
+      _activeLink={{ bg: "blue.900", textColor: "white" }}
+      borderRadius="xl">
+      <Text
+        borderRadius="xl"
+        _after={[{ bg: "white", textColor: "blue.900" }, { bg: "white", textColor: "blue.900" }, { bg: "blue.900", textColor: "white" }]}
+        p={[3, 3, 3, 5]}
+        display="block" {...rest}>
+        {children}
+      </Text>
+    </Link>
   );
 };
 

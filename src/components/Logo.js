@@ -5,7 +5,7 @@ export default function Logo(props) {
   return (
     <Box {...props}>
       <Text fontWeight="bold" fontFamily="dancingScript" align="center">
-        Arunima Barik
+        &lt; Arunima Barik /&gt;
       </Text>
     </Box>
   );

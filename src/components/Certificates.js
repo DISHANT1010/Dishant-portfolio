@@ -1,26 +1,28 @@
 import React from 'react'
-import { HStack, Box, Button, Image, Text, Link, Card, CardHeader, CardBody, CardFooter, Wrap, WrapItem } from '@chakra-ui/react'
-import pic from '../static/images/pic.png'
+import { HStack, Center, Button, Image, Text, Link, Card, CardHeader, CardBody, CardFooter, Wrap, WrapItem, VStack } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import illinois from '../static/images/illinois.png'
+import imperial from '../static/images/imperial.png'
+import hackerrank from '../static/images/hackerrank.png'
 
 const certificates = [
     {
-        image: pic,
-        name: "Machine Learning",
-        author: "Andrew NG",
-        link: "https://csi-nirma.vercel.app/"
+        image: illinois,
+        name: "Accelerated CS Fundamentals",
+        author: "University of Illinois",
+        link: "https://www.coursera.org/account/accomplishments/specialization/CWURV2Z4KFQY"
     },
     {
-        image: pic,
-        name: "Machine Learning",
-        author: "Andrew NG",
-        link: "https://csi-nirma.vercel.app/"
+        image: imperial,
+        name: "Mathematics for Machine Learning",
+        author: "Imperial College London",
+        link: "https://www.coursera.org/account/accomplishments/specialization/8SJC2KKRZHHN"
     },
     {
-        image: pic,
-        name: "Machine Learning",
-        author: "Andrew NG",
-        link: "https://csi-nirma.vercel.app/"
+        image: hackerrank,
+        name: "Problem Solving (Basic)",
+        author: "HackerRank",
+        link: "https://www.hackerrank.com/certificates/c1d53e933a58"
     }
 ]
 
@@ -29,14 +31,18 @@ const CertificateComponent = ({ certificate }) => {
         <WrapItem>
             <Card maxW={['sm', 'sm', 'xs', 'sm']} border="0px" bg="transparent" rounded="xl" shadow="xl">
                 <CardHeader align="center">
-                    <Image src={certificate.image} alt={certificate.name} w={200} h={200} />
+                    <VStack spacing={8}>
+                        <Center w="full" h="100px" justify="center">
+                            <Image src={certificate.image} alt={certificate.name} w="80%" h="auto" />
+                        </Center>
+
+                        <Center minH={['0px', '0px', '80px', '100px']} direction='column' spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} rounded="lg">
+                            <Text align="center" fontWeight="bold" w="100%" fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]}>{certificate.name}</Text>
+                        </Center>
+                    </VStack>
                 </CardHeader>
 
                 <CardBody>
-                    <Box direction='column' spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} mb={4} rounded="lg">
-                        <Text fontWeight="bold" w="100%" align="center" fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]}>{certificate.name}</Text>
-                    </Box>
-
                     <Text align="center" fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900">{certificate.author}</Text>
                 </CardBody>
 
@@ -57,7 +63,7 @@ const CertificateComponent = ({ certificate }) => {
 
 export default function Certificates() {
     return (
-        <Wrap mt={2} mb={4} py={3} px={5} justify="center" spacing={[8, 8, 10, 12]}>
+        <Wrap mt={2} py={3} px={5} justify="center" spacing={[8, 8, 10, 12]}>
             {certificates.map((certificate, index) => (
                 <CertificateComponent key={index} certificate={certificate} />
             ))}

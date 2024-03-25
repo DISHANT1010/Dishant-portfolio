@@ -6,7 +6,7 @@ import Degrees from '../components/Degrees'
 import Clubs from '../components/Clubs'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
-import pic from '../static/images/pic.png'
+import education from '../static/images/education.png'
 
 const About = () => {
     return (
@@ -15,7 +15,10 @@ const About = () => {
                 Education
             </Text>
             <Text mb={[5, 5, 8]} align="center" fontFamily="workSans" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">
-                Courses attended and Club activities
+                Educational background and Club activities
+            </Text>
+            <Text mb={[5, 5, 8]} fontFamily="paytone" fontSize={["2xl", "2xl", "3xl", "4xl"]} color="blue.900">
+                Coding Profiles
             </Text>
             <CodingProfiles />
         </>
@@ -25,7 +28,7 @@ const About = () => {
 export default function Education() {
     return (
         <Box as="body" bg="blue.50" pt={4}>
-            <TopSection content={<About />} image={pic} />
+            <TopSection content={<About />} image={education} />
             <Degrees />
             <Clubs />
             <Footer />

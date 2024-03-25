@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import SplashScreen from "./components/SplashScreen";
 import NavBar from "./components/NavBar"
 import HomePage from "./pages/HomePage"
 import Education from "./pages/Education"
@@ -11,7 +12,7 @@ import Projects from "./pages/Projects"
 import Certifications from "./pages/Certifications";
 import ContactMe from "./pages/ContactMe";
 
-export default function App() {
+function App() {
   return (
     <Router>
       <NavBar />
@@ -26,3 +27,5 @@ export default function App() {
     </Router>
   );
 }
+
+export default SplashScreen(App);  

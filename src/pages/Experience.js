@@ -4,7 +4,7 @@ import TopSection from '../components/TopSection'
 import Works from '../components/Works'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
-import pic from '../static/images/pic.png'
+import experience from '../static/images/experience.png'
 
 const About = () => {
     return (
@@ -22,7 +22,7 @@ const About = () => {
 export default function Experience() {
     return (
         <Box as="body" bg="blue.50" pt={4}>
-            <TopSection content={<About />} image={pic} />
+            <TopSection content={<About />} image={experience} />
             <Works />
             <Footer />
             <ScrollToTop />

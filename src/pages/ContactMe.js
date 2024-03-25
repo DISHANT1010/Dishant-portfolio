@@ -4,7 +4,7 @@ import TopSection from '../components/TopSection'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
-import pic from '../static/images/pic.png'
+import contactme from '../static/images/contactme.png'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const About = () => {
@@ -31,7 +31,7 @@ const About = () => {
 export default function ContactMe() {
     return (
         <Box as="body" bg="blue.50" pt={4}>
-            <TopSection content={<About />} image={pic} />
+            <TopSection content={<About />} image={contactme} />
             <Contact />
             <Footer />
             <ScrollToTop />

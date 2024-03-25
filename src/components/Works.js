@@ -1,54 +1,64 @@
 import { Stack, HStack, VStack, Box, Button, Center, Text, Image, Link, List, ListItem, ListIcon, Accordion, AccordionButton, AccordionIcon, AccordionPanel, AccordionItem } from '@chakra-ui/react'
 import React from 'react'
-import { Arrow } from './Icons'
-import pic from '../static/images/pic.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPencil } from '@fortawesome/free-solid-svg-icons'
+import magma from '../static/images/magma.png'
+import deshaw from '../static/images/deshaw.png'
+import google from '../static/images/google.png'
 
 const works = {
     "Internship": [
         {
-            image: pic,
-            name: "Google",
-            duration: "May 2022 - Aug 2022",
-            position: "STEP Intern",
-            location: "Mountain View, California",
-            description: ["I am currently pursuing my B.Tech in Computer Science from Nirma University", "I have learnt various technologies and tools in the field of computer science and have developed various projects and applications."],
+            image: magma,
+            name: "Magma",
+            duration: "Jan 2024 - Present",
+            position: "Full Stack Developer",
+            location: "Ahmedabad, Gujarat",
+            description: [
+                "Developing web applications from scratch and deploying them on company server",
+                "Maintaining network infrastructure of the organisation",
+                "Developed MagPort (magport.magmagroup.in), a SaaS container booking and logistics management software",
+                "Developed Admin Dashboard (admin.magmagroup.in) for the internal Operations team of Magma"
+            ]
         },
         {
-            image: pic,
+            image: deshaw,
+            name: "D.E. Shaw & Co.",
+            duration: "June 2023 - Aug 2023",
+            position: "Technology Analyst Intern",
+            location: "Hyderabad, Telangana",
+            description: [
+                "Worked in Data Technologies related team (Oasis) in Front Office",
+                "Accelerated short SQL queries using Apache Ignite",
+                "Current software Apache Spark takes 1-2 minutes to execute a short query",
+                "Developed a caching layer above the existing software and reduced query execution time to few seconds"
+            ]
+        },
+        {
+            image: google,
             name: "Google",
             duration: "May 2022 - Aug 2022",
-            position: "STEP Intern",
-            location: "Mountain View, California",
-            description: ["I am currently pursuing my B.Tech in Computer Science from Nirma University", "I have learnt various technologies and tools in the field of computer science and have developed various projects and applications."]
+            position: "Software STEP Intern",
+            location: "Bangalore, Karnataka",
+            description: [
+                "Worked in Google CloudSearch team which is a Search Engine for client organisations",
+                "Designed ingestion flow for FAQs and answers",
+                "Used concepts of data sources and search applications",
+                "Made Design Docs and presented solution in team meetings"
+            ]
         }
     ]
     ,
     "Full Time": [
-        {
-            image: pic,
-            name: "Google",
-            duration: "May 2022 - Aug 2022",
-            position: "STEP Intern",
-            location: "Mountain View, California",
-            description: ["I am currently pursuing my B.Tech in Computer Science from Nirma University", "I have learnt various technologies and tools in the field of computer science and have developed various projects and applications."]
-        },
-        {
-            image: pic,
-            name: "Google",
-            duration: "May 2022 - Aug 2022",
-            position: "STEP Intern",
-            location: "Mountain View, California",
-            description: ["I am currently pursuing my B.Tech in Computer Science from Nirma University", "I have learnt various technologies and tools in the field of computer science and have developed various projects and applications."]
-        }
     ]
 }
 
 const WorkComponent = ({ work }) => {
     return (
-        <Box w="100%" my={2} px={8} py={5}>
+        <Box w="100%" px={2} py={5}>
             <Stack shadow="xl" rounded="xl" p={4} direction={['column', 'column', 'row']} spacing={5} w="100%">
                 <Center w={["100%", "100%", "40%", "30%"]}>
-                    <Image src={work.image} alt={work.name} w={200} h={200} />
+                    <Image src={work.image} alt={work.name} w="80%" h="auto" />
                 </Center>
 
                 <Stack spacing={4} w={["100%", "100%", "60%", "70%"]} >
@@ -67,10 +77,10 @@ const WorkComponent = ({ work }) => {
                         </Stack>
                     </Stack>
 
-                    <List fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900">
+                    <List fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900" spacing={2}>
                         {work.description.map((desc) => (
                             <ListItem key={desc}>
-                                <ListIcon as={Arrow} />
+                                <ListIcon as={FontAwesomeIcon} icon={faPencil} />
                                 {desc}
                             </ListItem>
                         ))}

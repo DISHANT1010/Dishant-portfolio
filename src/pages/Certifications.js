@@ -4,7 +4,7 @@ import TopSection from '../components/TopSection'
 import Certificates from '../components/Certificates'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
-import pic from '../static/images/pic.png'
+import certification from '../static/images/certification.png'
 
 const About = () => {
     return (
@@ -13,7 +13,7 @@ const About = () => {
                 Certifications
             </Text>
             <Text mb={[5, 5, 8]} align="center" fontFamily="workSans" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">
-                Made projects in the field of Data Science, Machine Learning and Web Development
+                Took certified courses from Coursera and Udemy to upskill myself
             </Text>
         </>
     )
@@ -22,7 +22,7 @@ const About = () => {
 export default function Certifications() {
     return (
         <Box as="body" bg="blue.50" pt={4}>
-            <TopSection content={<About />} image={pic} />
+            <TopSection content={<About />} image={certification} />
             <Certificates />
             <Footer />
             <ScrollToTop />

@@ -5,7 +5,7 @@ import SocialMedia from '../components/SocialMedia'
 import Skills from '../components/Skills'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
-import pic from '../static/images/pic.png'
+import profile from '../static/images/profile.png'
 
 const About = () => {
     return (
@@ -27,7 +27,7 @@ const About = () => {
 export default function HomePage() {
     return (
         <Box as="body" bg="blue.50" pt={4}>
-            <TopSection content={<About />} image={pic} />
+            <TopSection content={<About />} image={profile} />
             <Skills />
             <Footer />
             <ScrollToTop />

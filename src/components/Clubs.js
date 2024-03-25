@@ -1,37 +1,48 @@
 import React from 'react'
 import { Stack, HStack, VStack, Button, Text, Image, Link, List, ListItem, ListIcon, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Arrow } from './Icons'
-import pic from '../static/images/pic.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPencil } from '@fortawesome/free-solid-svg-icons'
+import csi from '../static/images/csi.png'
+import codeadda from '../static/images/codeadda.png'
 
 const clubs = [
     {
-        image: pic,
+        image: csi,
         name: "Computer Society of India",
         duration: "2020 - 2024",
         position: "Vice President",
-        description: ["I am currently pursuing my B.Tech in Computer Science from Nirma University", "I have learnt various technologies and tools in the field of computer science and have developed various projects and applications."],
+        description: [
+            "Progressed from a Member (2020-2021) to Executive Board Member (2022) to the Vice President of CSI (2023)",
+            "CSI, founded in 1965, is a prominent professional organization for IT professionals in India",
+            "It promotes research, knowledge sharing and career development within the IT field",
+            "Conducted coding competitions and flagship events as a member of CSI, Nirma",
+            "Mentored juniors, organised workshops and national level hackathon"
+        ],
         website: "https://csi-nirma.vercel.app/"
     },
     {
-        image: pic,
-        name: "Computer Society of India",
+        image: codeadda,
+        name: "CodeAdda Programming Club",
         duration: "2020 - 2024",
-        position: "Vice President",
-        description: ["I am currently pursuing my B.Tech in Computer Science from Nirma University", "I have learnt various technologies and tools in the field of computer science and have developed various projects and applications."],
-        website: "https://csi-nirma.vercel.app/"
+        position: "Club Director",
+        description: [
+            "Progressed from a Member (2020-2021) to Club Director (2022)",
+            "CodeAdda is the official programming club of Nirma University which explains an trains students of all streams in Competitive Programming",
+            "It conducts sessions with other renowned CP experts, coding contests and peer learning sessions",
+            "Conducted coding competitions and mentored juniors in the field of Competitive Programming as part of CodeAdda"
+        ],
+        website: "https://codeadda.netlify.app/"
     }
 ]
 
 const ClubComponent = ({ club }) => {
     return (
-        <Card maxW='md' border="0px" bg="transparent" shadow="xl">
+        <Card w={['sm', 'sm', 'lg', 'xl']} border="0px" bg="transparent" shadow="xl" rounded="xl">
             <CardHeader align="center">
-                <Image src={club.image} alt={club.name} w={200} h={200} />
-            </CardHeader>
+                <Image src={club.image} alt={club.name} w="40%" h="auto" />
 
-            <CardBody>
-                <Stack direction='column' spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} rounded="lg" mb={4}>
+                <Stack mt={10} direction='column' spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} rounded="lg">
 
                     <Text fontWeight="bold" w="100%" align="center" fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]}>{club.name}</Text>
 
@@ -39,11 +50,13 @@ const ClubComponent = ({ club }) => {
 
                     <Text fontWeight="bold" w="100%" align="center" fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]}>{club.duration}</Text>
                 </Stack>
+            </CardHeader>
 
-                <List fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900">
+            <CardBody>
+                <List fontFamily="workSans" fontSize={["lg", "lg", "xl", "2xl"]} color="blue.900" spacing={2}>
                     {club.description.map((club) => (
                         <ListItem key={club}>
-                            <ListIcon as={Arrow} />
+                            <ListIcon as={FontAwesomeIcon} icon={faPencil} />
                             {club}
                         </ListItem>
                     ))}
@@ -66,12 +79,12 @@ const ClubComponent = ({ club }) => {
 
 export default function Clubs() {
     return (
-        <VStack>
+        <VStack mt={8}>
             <Text fontFamily="paytone" fontSize={["2xl", "2xl", "3xl", "4xl"]} color="blue.900">
-                Clubs
+                Club Activities
             </Text>
 
-            <Stack my={2} py={3} px={8} spacing={[5, 5, 5, 20]} direction={['column', 'column', 'row']}>
+            <Stack px={5} py={3} spacing={[5, 5, 8, 20]} direction={['column', 'column', 'column', 'row']}>
                 {clubs.map((club, index) => (
                     <ClubComponent key={index} club={club} />
                 ))}
