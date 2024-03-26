@@ -1,27 +1,17 @@
-import {
-  Box,
-  Text,
-  Link,
-  Button,
-  Stack,
-  VStack,
-  HStack,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  Input,
-  Textarea
-} from '@chakra-ui/react'
+import { Box, Text, Link, Button, Stack, VStack, HStack, FormControl,
+  FormLabel, FormErrorMessage, Input, Textarea } from '@chakra-ui/react'
 import React, { useState } from 'react';
 import { EmailIcon } from '@chakra-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import emailjs from '@emailjs/browser';
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     message: '',
   });
 
@@ -35,10 +25,10 @@ const ContactForm = () => {
     event.preventDefault();
 
     const validationErrors = {};
-    if (!formData.name) {
+    if (!formData.user_name) {
       validationErrors.name = 'Name is required';
     }
-    if (!formData.email) {
+    if (!formData.user_email) {
       validationErrors.email = 'Email is required';
     }
     if (!formData.message) {
@@ -47,10 +37,25 @@ const ContactForm = () => {
 
     setErrors(validationErrors);
 
-    // Submit form data (replace with your logic)
+    // Submit form data
     if (Object.keys(validationErrors).length === 0) {
-      alert('Form submitted:', formData);
-      setFormData({ name: '', email: '', message: '' });
+
+      // console.log(formData)
+
+      emailjs
+        .send('portfolio_contact_form', 'portfolio_contact_form', formData, {
+          publicKey: 'gfB98Vc-XziEe3_9B',
+        })
+        .then(
+          () => {
+            alert('Form submitted');
+            setFormData({ user_name: '', user_email: '', message: '' });
+          },
+          (error) => {
+            alert('Error in submitting the form');
+            console.log(error.text);
+          },
+      );
     }
   };
 
@@ -66,10 +71,10 @@ const ContactForm = () => {
 
           <VStack spacing={5}>
             <FormControl isInvalid={errors.name}>
-              <FormLabel htmlFor="name" fontfamily="workSans" fontsize={['xl', 'xl', '2xl', '3xl']}>Name</FormLabel>
+              <FormLabel htmlFor="user_name" fontFamily="workSans" fontSize={['lg', 'lg', 'xl']}>Name</FormLabel>
               <Input
-                id="name"
-                name="name"
+                id="user_name"
+                name="user_name"
                 value={formData.name}
                 onChange={handleChange}
                 borderColor="blue.900"
@@ -79,10 +84,10 @@ const ContactForm = () => {
             </FormControl>
 
             <FormControl isInvalid={errors.email}>
-              <FormLabel htmlFor="email" fontfamily="workSans" fontsize={['xl', 'xl', '2xl', '3xl']}>Email</FormLabel>
+              <FormLabel htmlFor="user_email" fontFamily="workSans" fontSize={['lg', 'lg', 'xl']}>Email</FormLabel>
               <Input
-                id="email"
-                name="email"
+                id="user_email"
+                name="user_email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -93,7 +98,7 @@ const ContactForm = () => {
             </FormControl>
 
             <FormControl isInvalid={errors.message}>
-              <FormLabel htmlFor="message" fontfamily="workSans" fontsize={['xl', 'xl', '2xl', '3xl']}>Message</FormLabel>
+              <FormLabel htmlFor="message" fontFamily="workSans" fontSize={['lg', 'lg', 'xl']}>Message</FormLabel>
               <Textarea
                 id="message"
                 name="message"
@@ -132,7 +137,7 @@ const SocialMedia = ({ props }) => {
 
       <VStack spacing={3}>
         <Link href="mailto:arunimabarik75@gmail.com" isExternal>
-          <Button h={["50px", "50px", "60px"]} w="300px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["xl", "xl", "2xl"]} textColor="white">
+          <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="40%" align="right">
                 <FontAwesomeIcon icon={faPaperPlane} />
@@ -143,7 +148,7 @@ const SocialMedia = ({ props }) => {
         </Link>
 
         <Link href="https://www.linkedin.com/in/arunima-barik/" isExternal>
-          <Button h={["50px", "50px", "60px"]} w="300px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["xl", "xl", "2xl"]} textColor="white">
+          <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="40%" align="right">
                 <FontAwesomeIcon icon={faLinkedinIn} />
@@ -154,7 +159,7 @@ const SocialMedia = ({ props }) => {
         </Link>
 
         <Link href="https://github.com/arunimabarik75/" isExternal>
-          <Button h={["50px", "50px", "60px"]} w="300px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["xl", "xl", "2xl"]} textColor="white">
+          <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="40%" align="right">
                 <FontAwesomeIcon icon={faGithub} />
@@ -165,7 +170,7 @@ const SocialMedia = ({ props }) => {
         </Link>
 
         <Link href="https://twitter.com/arunima_barik" isExternal>
-          <Button h={["50px", "50px", "60px"]} w="300px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["xl", "xl", "2xl"]} textColor="white">
+          <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="40%" align="right">
                 <FontAwesomeIcon icon={faTwitter} />

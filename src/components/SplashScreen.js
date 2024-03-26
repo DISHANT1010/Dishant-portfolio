@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Image, Center, VStack } from '@chakra-ui/react'
 import Logo from './Logo'
 import pic from '../static/images/pic.png'
-import animated from '../static/images/animated.gif'
+import animated from '../static/gifs/animated.gif'
 
 function SplashMessage() {
     return (
@@ -28,7 +28,7 @@ export default function SplashScreen(WrappedComponent) {
                     this.setState({
                         loading: false,
                     });
-                }, 2000)
+                }, 5000)
             } catch (err) {
                 console.log(err);
                 this.setState({

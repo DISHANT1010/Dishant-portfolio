@@ -61,7 +61,7 @@ const SkillComponent = ({ skill }) => {
         <Box w="100%" px={8} py={5}>
             <Stack shadow="xl" rounded="xl" p={4} direction={['column', 'column', 'row']} spacing={5} w="100%">
                 <Center w={["100%", "100%", "40%", "30%"]}>
-                    <Image src={skill.image} alt={skill.name} w="80%" h="auto" />
+                    <Image src={skill.image} alt={skill.name} w={["60%", "60%", "90%", "80%"]} h="auto" />
                 </Center>
 
                 <Stack spacing={4} w={["100%", "100%", "60%", "70%"]} >

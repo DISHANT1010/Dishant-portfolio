@@ -1,4 +1,4 @@
-import { Stack, HStack, VStack, Box, Button, Center, Text, Image, Link, List, ListItem, ListIcon, Accordion, AccordionButton, AccordionIcon, AccordionPanel, AccordionItem } from '@chakra-ui/react'
+import { Stack, Box, Center, Text, Image, List, ListItem, ListIcon, Accordion, AccordionButton, AccordionIcon, AccordionPanel, AccordionItem } from '@chakra-ui/react'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
@@ -58,7 +58,7 @@ const WorkComponent = ({ work }) => {
         <Box w="100%" px={2} py={5}>
             <Stack shadow="xl" rounded="xl" p={4} direction={['column', 'column', 'row']} spacing={5} w="100%">
                 <Center w={["100%", "100%", "40%", "30%"]}>
-                    <Image src={work.image} alt={work.name} w="80%" h="auto" />
+                    <Image src={work.image} alt={work.name} w={["60%", "60%", "90%", "80%"]} h="auto" />
                 </Center>
 
                 <Stack spacing={4} w={["100%", "100%", "60%", "70%"]} >
@@ -95,7 +95,7 @@ const WorkAccordion = ({ workType, work }) => {
     return (
         <Accordion allowToggle mb={8}>
             <AccordionItem rounded="xl">
-                <AccordionButton rounded="xl" p={5} border="2px" borderColor="blue.900" _hover={{ bg: 'blue.900', color: 'white' }} _expanded={{ bg: 'blue.900', color: 'white', roundedBottom: '0px' }}>
+                <AccordionButton rounded="xl" p={5} border="2px" borderColor="blue.900" color="blue.900" _hover={{ bg: 'blue.900', color: 'white' }} _expanded={{ bg: 'blue.900', color: 'white', roundedBottom: '0px' }}>
                     <Box as="span" flex='1' textAlign='left'>
                         <Text fontFamily="paytone" fontSize={["lg", "lg", "xl", "2xl"]} align={["center", "center", "left"]}>
                             {workType}

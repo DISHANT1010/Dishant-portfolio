@@ -38,7 +38,7 @@ const clubs = [
 
 const ClubComponent = ({ club }) => {
     return (
-        <Card w={['sm', 'sm', 'lg', 'xl']} border="0px" bg="transparent" shadow="xl" rounded="xl">
+        <Card maxW={['sm', 'sm', 'xl', 'xl']} border="0px" bg="transparent" shadow="xl" rounded="xl">
             <CardHeader align="center">
                 <Image src={club.image} alt={club.name} w="40%" h="auto" />
 

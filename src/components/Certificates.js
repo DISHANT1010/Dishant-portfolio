@@ -33,7 +33,7 @@ const CertificateComponent = ({ certificate }) => {
                 <CardHeader align="center">
                     <VStack spacing={8}>
                         <Center w="full" h="100px" justify="center">
-                            <Image src={certificate.image} alt={certificate.name} w="80%" h="auto" />
+                            <Image src={certificate.image} alt={certificate.name} w={["60%", "60%", "90%", "80%"]} h="auto" />
                         </Center>
 
                         <Center minH={['0px', '0px', '80px', '100px']} direction='column' spacing={2} bg="blue.900" textColor="white" w="100%" px={5} py={2} rounded="lg">
