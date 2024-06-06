@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, IconButton, HStack, Link, Button } from '@chakra-ui/react'
-import { Github, Linkedin, Twitter, Gmail, Star } from './Icons'
+import { Github, Linkedin, TwitterX, Gmail, Star } from './Icons'
 
 export default function SocialMedia() {
   return (
@@ -18,8 +18,8 @@ export default function SocialMedia() {
           <IconButton _hover={{ bg: "transparent" }} aria-label='Github' bg="transparent" fontSize={["18px", "20px"]} icon={<Github />} />
         </Link>
 
-        <Link href='https://twitter.com/arunima_barik' isExternal>
-          <IconButton _hover={{ bg: "transparent" }} aria-label='Twitter' bg="transparent" fontSize={["18px", "20px"]} icon={<Twitter />} />
+        <Link href='https://x.com/arunima_barik' isExternal>
+          <IconButton _hover={{ bg: "transparent" }} aria-label='Twitter' bg="transparent" fontSize={["18px", "20px"]} icon={<TwitterX />} />
         </Link>
       </HStack>
 

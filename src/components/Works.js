@@ -11,13 +11,15 @@ const works = {
         {
             image: magma,
             name: "Magma",
-            duration: "Jan 2024 - Present",
+            duration: "Jan 2024 - MAy 2024",
             position: "Full Stack Developer",
             location: "Ahmedabad, Gujarat",
             description: [
                 "Developing web applications from scratch and deploying them on company server",
                 "Maintaining network infrastructure of the organisation",
                 "Developed MagPort (magport.magmagroup.in), a SaaS container booking and logistics management software",
+                "Developed Magma Factory (factory.magmagroup.in), a platform for procuring raw materials and uploading dead stock for liquidation",
+                "Revamped Magma Green (green.magmagroup.in), an ESG data management software to record energy and water consumption and carbon footprint",
                 "Developed Admin Dashboard (admin.magmagroup.in) for the internal Operations team of Magma"
             ]
         },
@@ -50,6 +52,15 @@ const works = {
     ]
     ,
     "Full Time": [
+        {
+            image: google,
+            name: "Google",
+            duration: "Upcoming",
+            position: "Software Engineer",
+            location: "Bangalore, Karnataka",
+            description: [
+            ]
+        }
     ]
 }
 

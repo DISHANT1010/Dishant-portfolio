@@ -12,7 +12,7 @@ const degrees = [
         name: "Nirma University",
         duration: "2020 - 2024",
         degree: "B.Tech in Computer Science",
-        score: "9.18 / 10.0",
+        score: "9.15 / 10.0",
         description: [
             "Course Work - Data Structures and Algorithms, Object Oriented Programming, Operating Systems, Database Management, Computer Networks, Machine Learning, Deep Learning, Microservice Architecture",
             "Third Rank in B.Tech First Year",
