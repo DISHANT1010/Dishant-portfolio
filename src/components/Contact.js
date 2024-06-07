@@ -3,7 +3,7 @@ import { Box, Text, Link, Button, Stack, VStack, HStack, FormControl,
 import React, { useState } from 'react';
 import { EmailIcon } from '@chakra-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedinIn, faTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import emailjs from '@emailjs/browser';
 
@@ -110,7 +110,7 @@ const ContactForm = () => {
               <FormErrorMessage>{errors.message}</FormErrorMessage>
             </FormControl>
 
-            <Button type="submit" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
+            <Button p={[3, 3, 5, 6]} type="submit" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
               <HStack>
                 <Text>Send Message</Text>
                 <EmailIcon w={6} h={6} />
@@ -139,10 +139,10 @@ const SocialMedia = ({ props }) => {
         <Link href="mailto:arunimabarik75@gmail.com" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
-              <Box w="40%" align="right">
+              <Box w="30%" align="right">
                 <FontAwesomeIcon icon={faPaperPlane} />
               </Box>
-              <Text w="60%" align="left">Gmail</Text>
+              <Text w="70%" align="left">Gmail</Text>
             </HStack>
           </Button>
         </Link>
@@ -150,10 +150,10 @@ const SocialMedia = ({ props }) => {
         <Link href="https://www.linkedin.com/in/arunima-barik/" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
-              <Box w="40%" align="right">
+              <Box w="30%" align="right">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </Box>
-              <Text w="60%" align="left">LinkedIn</Text>
+              <Text w="70%" align="left">LinkedIn</Text>
             </HStack>
           </Button>
         </Link>
@@ -161,21 +161,21 @@ const SocialMedia = ({ props }) => {
         <Link href="https://github.com/arunimabarik75/" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
-              <Box w="40%" align="right">
+              <Box w="30%" align="right">
                 <FontAwesomeIcon icon={faGithub} />
               </Box>
-              <Text w="60%" align="left">Github</Text>
+              <Text w="70%" align="left">Github</Text>
             </HStack>
           </Button>
         </Link>
 
-        <Link href="https://twitter.com/arunima_barik" isExternal>
+        <Link href="https://x.com/arunima_barik" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
-              <Box w="40%" align="right">
-                <FontAwesomeIcon icon={faTwitter} />
+              <Box w="30%" align="right">
+                <FontAwesomeIcon icon={faXTwitter} />
               </Box>
-              <Text w="60%" align="left">Twitter</Text>
+              <Text w="70%" align="left">Twitter X</Text>
             </HStack>
           </Button>
         </Link>
