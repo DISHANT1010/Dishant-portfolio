@@ -17,7 +17,7 @@ const About = () => {
             <Text mb={5} align="center" fontFamily="workSans" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">
                 Have a look at my resume. Feel free to reach out to me for any queries or suggestions
             </Text>
-            <Link href={resume} download="Arunima Barik (Resume)" target="_blank">
+            <Link href={resume} download="Arunima_Barik_Resume" target="_blank">
                 <Button p={[3, 3, 5, 6]} bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
                     <HStack spacing={2}>
                         <Text>Resume</Text>
