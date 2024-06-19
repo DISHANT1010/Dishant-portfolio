@@ -20,14 +20,14 @@ const works = {
                 "Developed MagPort (magport.magmagroup.in), a SaaS container booking and logistics management software",
                 "Developed Magma Factory (factory.magmagroup.in), a platform for procuring raw materials and uploading dead stock for liquidation",
                 "Revamped Magma Green (green.magmagroup.in), an ESG data management software to record energy and water consumption and carbon footprint",
-                "Developed Admin Dashboard (admin.magmagroup.in) for the internal Operations team of Magma"
+                "Developed Admin Dashboard (admin.magmagroup.in) for internal use by Operations team of Magma"
             ]
         },
         {
             image: deshaw,
             name: "D.E. Shaw & Co.",
             duration: "June 2023 - Aug 2023",
-            position: "Technology Analyst Intern",
+            position: "Technology Developer Intern",
             location: "Hyderabad, Telangana",
             description: [
                 "Worked in Data Technologies related team (Oasis) in Front Office",
