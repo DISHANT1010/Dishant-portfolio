@@ -55,10 +55,13 @@ const works = {
         {
             image: google,
             name: "Google",
-            duration: "Upcoming",
+            duration: "July 2024 - Present",
             position: "Software Engineer",
             location: "Bangalore, Karnataka",
             description: [
+                "Part of YouTube Creator Support team",
+                "Working on Creator Data Platform to streamline and secure creator data",
+                "Focused on improving the experience of creators and support agents"
             ]
         }
     ]
