@@ -6,58 +6,36 @@ import { faPencil } from '@fortawesome/free-solid-svg-icons'
 
 const projects = [
     {
-        name: "Hadoop Cricket Match Analysis",
-        skills: "Apache Hadoop",
+        name: "PrankSter",
+        skills: "AWS",
         description: [
-            "Analyzes cricket match data using Hadoop's MapReduce functions (Mapper, Reducer, Combiner and Partitioner)",
-            "Extracts insights on Total Runs Team-Wise, Total Runs Player-Wise, Top 3 Batsmen and Top 3 Bowlers"
+            "Migrated Prankster application from local server to AWS; hosted React frontend on S3 + CloudFront and deployed Node.js backend to Elastic Beanstalk using ZIP archive stored in S3. Implemented CI/CD pipeline for automated build deployment and version control ensuring seamless delivery and reduced manual effort.",
+            "Configured Auto Scaling and Load Balancer on Elastic Beanstalk to ensure high availability, fault tolerance, and efficient traffic distribution."
         ],
-        website: "https://github.com/arunimabarik75/Hadoop-Cricket-Match-Analysis"
+        website: "https://pslink.world"
     },
     {
-        name: "LL Parser",
-        skills: "Python, Streamlit",
+        name: "Wanderlust-A Travell Blog App",
+        skills: "Docker, Jenkins, K8s, ArgoCD",
         description: [
-            "Web application that demonstrates LL Parsing technique used by compilers to perform top-down non-recursive parsing",
-            "Deployed using Streamlit Community Cloud"
+            "Developed and maintained CI/CD pipelines using Jenkins to automate build, test, and deployment processes for a React frontend and Node.js backend application.",
+            "Containerized application components using Docker and pushed images to Docker Hub for version control and efficient deployment.",
+            "Deployed the application on a Kubernetes cluster to ensure high availability, scalability, and streamlined management of microservices."
         ],
-        website: "https://github.com/arunimabarik75/LL-Parser"
+        website: "https://github.com/DISHANT1010/wanderlust-Devops-project"
     },
     {
-        name: "Fibonacci Heap Simulator",
-        skills: "HTML, Bootstrap, JavaScript",
+        name: "StudyNotion(Edtech Plateform)",
+        skills: "React, Node.js, Express js, MongoDB",
         description: [
-            "Allows users to insert, delete, extract minimum and merge in Fibonacci heaps",
-            "Fibonacci Heap is a specialized data structure known for its efficient operations, find minimum and merge heaps"
+            "Developed a scalable online learning platform using React.js for the frontend and Node.js with Express.js for the backend.",
+            "Engineered a robust MongoDB database structure that enhanced transaction management security, resulting in the successful handling of over 1,000 transactions daily with zero data breaches reported during internship tenure.",
+            "Implemented authentication and authorization using JWT to secure user access."
         ],
-        website: "https://github.com/arunimabarik75/Fibonacci-Heap"
+        website: "https://github.com/DISHANT1010/StudyNotion"
     },
-    {
-        name: "CIFAR-10 Image Classification",
-        skills: "HTML, Bootstrap, Python",
-        description: [
-            "Explores Image Classification using techniques like HOG feature extraction and PCA dimensionality reduction",
-            "Utilizes the CIFAR - 10 dataset to train a Support Vector Machine (SVM) model with 71% accuracy"],
-        website: "https://github.com/arunimabarik75/CIFAR-10-Image-Classification"
-    },
-    {
-        name: "Banker's Algorithm",
-        skills: "HTML, CSS, JavaScript",
-        description: [
-            "Simulation of Banker's Algorithm - resource allocation and deadlock avoidance algorithm used in Operating Systems",
-            "Used to determine whether a system is in a safe state by checking if there is a safe sequence of resource allocation"
-        ],
-        website: "https://github.com/arunimabarik75/Bankers-Algorithm"
-    },
-    {
-        name: "FrequentlyContacted",
-        skills: "C Language",
-        description: [
-            "Simulation of Messaging Application using LRU cache concept",
-            "Uses Doubly Linked List and Binary Search Tree",
-            "Can be extended to WhatsApp Chat history, Recently used apps on smartphone and Notification Panel"],
-        website: "https://github.com/arunimabarik75/FrequentlyContacted"
-    }
+    
+    
 ]
 
 const ProjectComponent = ({ project }) => {
@@ -108,7 +86,7 @@ export default function ProjectCards() {
             </Wrap>
 
             <Box pt={10} align="center">
-                <Link href='https://github.com/arunimabarik75?tab=repositories' isExternal>
+                <Link href='https://github.com/DISHANT1010?tab=repositories' isExternal>
                     <Button p={[3, 3, 5, 6]} bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
                         <HStack>
                             <Text>See All Projects</Text>

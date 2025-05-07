@@ -2,68 +2,27 @@ import { Stack, Box, Center, Text, Image, List, ListItem, ListIcon, Accordion, A
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
-import magma from '../static/images/magma.png'
+import Apex from '../static/images/Apex.png'
 import deshaw from '../static/images/deshaw.png'
 import google from '../static/images/google.png'
 
 const works = {
     "Internship": [
         {
-            image: magma,
-            name: "Magma",
-            duration: "Jan 2024 - MAy 2024",
-            position: "Full Stack Developer",
-            location: "Ahmedabad, Gujarat",
+            image: Apex,
+            name: "Apex SoftTech Software Solution",
+            duration: "Jan 2025 - Current",
+            position: "DevOps Engineer",
+            location: "Surat, Gujarat",
             description: [
-                "Developing web applications from scratch and deploying them on company server",
-                "Maintaining network infrastructure of the organisation",
-                "Developed MagPort (magport.magmagroup.in), a SaaS container booking and logistics management software",
-                "Developed Magma Factory (factory.magmagroup.in), a platform for procuring raw materials and uploading dead stock for liquidation",
-                "Revamped Magma Green (green.magmagroup.in), an ESG data management software to record energy and water consumption and carbon footprint",
-                "Developed Admin Dashboard (admin.magmagroup.in) for internal use by Operations team of Magma"
+                "Developed, deployed, and maintained web applications on company servers using CI/CD pipelines.",
+                "Automated build, test, and deployment processes using tools like Jenkins, GitLab CI, and shell scripting.",
+                "Managed version control, environment configurations, and infrastructure as code (IaC) using Git and Terraform.",
+                "Containerized applications using Docker and managed deployments on staging and production environments.",
+                "Migrated on-premise applications to cloud infrastructure, leveraging AWS Elastic Beanstalk for streamlined deployment, S3 for robust storage, and CloudFront for fast content delivery.",
             ]
         },
-        {
-            image: deshaw,
-            name: "D.E. Shaw & Co.",
-            duration: "June 2023 - Aug 2023",
-            position: "Technology Developer Intern",
-            location: "Hyderabad, Telangana",
-            description: [
-                "Worked in Data Technologies related team (Oasis) in Front Office",
-                "Accelerated short SQL queries using Apache Ignite",
-                "Current software Apache Spark takes 1-2 minutes to execute a short query",
-                "Developed a caching layer above the existing software and reduced query execution time to few seconds"
-            ]
-        },
-        {
-            image: google,
-            name: "Google",
-            duration: "May 2022 - Aug 2022",
-            position: "Software STEP Intern",
-            location: "Bangalore, Karnataka",
-            description: [
-                "Worked in Google CloudSearch team which is a Search Engine for client organisations",
-                "Designed ingestion flow for FAQs and answers",
-                "Used concepts of data sources and search applications",
-                "Made Design Docs and presented solution in team meetings"
-            ]
-        }
-    ]
-    ,
-    "Full Time": [
-        {
-            image: google,
-            name: "Google",
-            duration: "July 2024 - Present",
-            position: "Software Engineer",
-            location: "Bangalore, Karnataka",
-            description: [
-                "Part of YouTube Creator Support team",
-                "Working on Creator Data Platform to streamline and secure creator data",
-                "Focused on improving the experience of creators and support agents"
-            ]
-        }
+        
     ]
 }
 

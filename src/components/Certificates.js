@@ -4,25 +4,14 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import illinois from '../static/images/illinois.png'
 import imperial from '../static/images/imperial.png'
 import hackerrank from '../static/images/hackerrank.png'
+import IBM from '../static/images/IBM.png'
 
 const certificates = [
     {
-        image: illinois,
-        name: "Accelerated CS Fundamentals",
-        author: "University of Illinois",
-        link: "https://www.coursera.org/account/accomplishments/specialization/CWURV2Z4KFQY"
-    },
-    {
-        image: imperial,
-        name: "Mathematics for Machine Learning",
-        author: "Imperial College London",
-        link: "https://www.coursera.org/account/accomplishments/specialization/8SJC2KKRZHHN"
-    },
-    {
-        image: hackerrank,
-        name: "Problem Solving (Basic)",
-        author: "HackerRank",
-        link: "https://www.hackerrank.com/certificates/c1d53e933a58"
+        image: IBM,
+        name: "Full Stack Software Developer Assessment",
+        author: "IBM",
+        link: "https://coursera.org/share/6229b6168a461871ea83ad841e0ecbe0"
     }
 ]
 

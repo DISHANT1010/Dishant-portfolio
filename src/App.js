@@ -3,7 +3,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import SplashScreen from "./components/SplashScreen";
 import NavBar from "./components/NavBar"
 import HomePage from "./pages/HomePage"
 import Education from "./pages/Education"
@@ -28,4 +27,4 @@ function App() {
   );
 }
 
-export default SplashScreen(App);  
+export default App;  

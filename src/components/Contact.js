@@ -3,7 +3,7 @@ import { Box, Text, Link, Button, Stack, VStack, HStack, FormControl,
 import React, { useState } from 'react';
 import { EmailIcon } from '@chakra-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn, faTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import emailjs from '@emailjs/browser';
 
@@ -136,7 +136,7 @@ const SocialMedia = ({ props }) => {
       </Text>
 
       <VStack spacing={3}>
-        <Link href="mailto:arunimabarik75@gmail.com" isExternal>
+        <Link href="mailto:dobariyadishant@gmail.com" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="30%" align="right">
@@ -147,7 +147,7 @@ const SocialMedia = ({ props }) => {
           </Button>
         </Link>
 
-        <Link href="https://www.linkedin.com/in/arunima-barik/" isExternal>
+        <Link href="https://www.linkedin.com/in/dishant-dobariya-41468a29a/" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="30%" align="right">
@@ -158,7 +158,7 @@ const SocialMedia = ({ props }) => {
           </Button>
         </Link>
 
-        <Link href="https://github.com/arunimabarik75/" isExternal>
+        <Link href="https://github.com/DISHANT1010/" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="30%" align="right">
@@ -169,7 +169,7 @@ const SocialMedia = ({ props }) => {
           </Button>
         </Link>
 
-        <Link href="https://x.com/arunima_barik" isExternal>
+        <Link href="https://x.com/DobariyaDi7408" isExternal>
           <Button h={["50px", "50px", "55px"]} w="250px" bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
             <HStack w="100%" spacing={5}>
               <Box w="30%" align="right">

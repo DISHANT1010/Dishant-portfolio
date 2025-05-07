@@ -13,7 +13,7 @@ const About = () => {
                 Experience
             </Text>
             <Text mb={[5, 5, 8]} align="center" fontFamily="workSans" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">
-                Interned with reputed MnCs and startups with experience in the field of Full Stack Development, Distributed Systems and Big Data Tools
+            Interned with reputed startups, gaining hands-on experience in DevOps practices, CI/CD pipelines, cloud infrastructure, containerization, and monitoring tools.
             </Text>
         </>
     )

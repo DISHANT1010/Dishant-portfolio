@@ -3,52 +3,31 @@ import React from 'react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
-import nirma from '../static/images/nirma.png'
 import kdarfs from '../static/images/kdarfs.png'
+import Asoit from '../static/images/Asoit.png'
+import Samarpan from '../static/images/Samarpan.png'
 
 const degrees = [
     {
-        image: nirma,
-        name: "Nirma University",
-        duration: "2020 - 2024",
-        degree: "B.Tech in Computer Science",
-        score: "9.15 / 10.0",
+        image: Asoit,
+        name: "Aditya Silver Oak Institute Of technology",
+        duration: "2021 - 2025",
+        degree: "B.Tech in Computer Engineering",
+        score: "9.32 / 10.0",
         description: [
             "Course Work - Data Structures and Algorithms, Object Oriented Programming, Operating Systems, Database Management, Computer Networks, Machine Learning, Deep Learning, Microservice Architecture",
-            "Third Rank in B.Tech First Year",
-            "Recipient of Dewang Mehta IT Awards for Second Rank in B.Tech CSE",
-            "Served as Student Placement Coordinator for Placement Cell"
         ],
-        website: "https://www.nirmauni.ac.in/"
     },
     {
-        image: kdarfs,
-        name: "Kokilaben Dhirubhai Ambani Vidyamandir",
-        duration: "2019 - 2020",
+        image: Samarpan,
+        name: "Samarpan Techno School",
+        duration: "2020 - 2021",
         degree: "Class 12",
-        score: "97%",
+        score: "76%",
         description: [
-            "Subjects - English, Physics, Chemistry, Mathematics, Informatics Practices",
-            "Secured 97% in CBSE Class 12 Board Exams",
-            "Overall School Rank 5 in Science Stream",
-            "Subject Topper in Chemistry with 99/100 marks"
+            "Subjects - English, Physics, Chemistry, Mathematics, Computer",
         ],
-        website: "https://www.rfs.edu.in/Jamnagar"
     },
-    {
-        image: kdarfs,
-        name: "Kokilaben Dhirubhai Ambani Vidyamandir",
-        duration: "2017 - 2018",
-        degree: "Class 10",
-        score: "98%",
-        description: [
-            "Subjects - English, Hindi, Mathematics, Science, Social Studies",
-            "Secured 98% in CBSE Class 10 Board Exams",
-            "Overall School Rank 2",
-            "Subject Topper in English with 98/100 marks and Science with 100/100 marks"
-        ],
-        website: "https://www.rfs.edu.in/Jamnagar"
-    }
 ]
 
 const DegreeComponent = ({ degree }) => {

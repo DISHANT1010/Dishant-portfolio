@@ -1,4 +1,4 @@
-import { Stack, HStack, VStack, Box, Text, Image, Center, Wrap, List, ListItem, ListIcon } from '@chakra-ui/react'
+import { Stack, VStack, Box, Text, Image, Center, Wrap, List, ListItem, ListIcon } from '@chakra-ui/react'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
@@ -9,49 +9,40 @@ import datascience from '../static/images/datascience.png'
 import webdev from '../static/images/webdev.png'
 
 const skills = [
-    {
-        image: cp,
-        title: "Competitive Programming",
-        icons: [icons.Codeforces, icons.Codechef, icons.Hackerrank],
-        description: [
-            "Solved 600+ questions on Competitive Programming platforms",
-            "Specialist (Max. Rating 1467) on Codeforces",
-            "3 Star (Max. Rating 1689) on CodeChef",
-            "5 Star badge in Problem Solving on HackerRank"
-        ]
-    },
+    // {
+    //     image: cp,
+    //     title: "Competitive Programming",
+    //     icons: [icons.Codeforces, icons.Codechef, icons.Hackerrank],
+    //     description: [
+    //         "Solved 600+ questions on Competitive Programming platforms",
+    //         "Specialist (Max. Rating 1467) on Codeforces",
+    //         "3 Star (Max. Rating 1689) on CodeChef",
+    //         "5 Star badge in Problem Solving on HackerRank"
+    //     ]
+    // },
     {
         image: dsa,
         title: "Data Structures and Algorithms",
         icons: [icons.Leetcode, icons.Gfg, icons.Interviewbit],
         description: [
-            "Solved 350+ questions on LeetCode",
+            "Solved 500+ questions on LeetCode",
             "Good grasp on Arrays, Linked Lists, Stacks, Queues, Trees and Graphs",
             "Appreciable knowledge in Design and Analysis of Algorithms",
             "Prefer using C++ for implementation"
         ]
     },
-    {
-        image: datascience,
-        title: "Data Science, Machine Learning and Deep Learning",
-        icons: [icons.Kaggle, icons.Python, icons.Numpy, icons.Pandas, icons.Matplotlib, icons.Seaborn, icons.Sklearn, icons.Tensorflow, icons.Keras],
-        description: [
-            "Skilled in data preprocessing and data analysis",
-            "Able to create graphical representations to visualise the available data",
-            "Build and train Machine Learning models for different use cases",
-            "Basic knowledge in Deep Learning (Neural Networks, Image Classification and Segmentation, LSTM, Encoders and Decoders etc.)",
-            "Prefer using Python for implementation"
-        ]
-    },
+
     {
         image: webdev,
-        title: "Full Stack Web Development",
-        icons: [icons.Html, icons.Css, icons.Tailwindcss, icons.Bootstrap, icons.Reactjs, icons.Flask, icons.Mysql, icons.Mongodb, icons.Apache, icons.Postman],
+        title: "DevOps Engineer",
+        icons: [],
         description: [
-            "Skilled in frontend technologies like HTML, Tailwind CSS, Bootstrap, JavaScript and React.js",
-            "Able to write REST APIs for backend using Flask",
-            "Knowledgeable about databases such as MySQL and MongoDB",
-            "Experienced in using Apache HTTP Server for deployment"
+            "Continuous Integration/Continuous Deployment (CI/CD)",
+            "Version Control Systems",
+            "Containerization and Orchestration",
+            "Infrastructure as Code (IaC)",
+            "Cloud Platforms(AWS,Azure)",
+            "Scripting and Automation"
         ]
     }
 ]

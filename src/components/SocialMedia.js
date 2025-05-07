@@ -6,31 +6,22 @@ export default function SocialMedia() {
   return (
     <>
       <HStack mb={[1, 1, 3]} spacing={[4, 4, 6]}>
-        <Link href='mailto:arunimabarik75@gmail.com' isExternal>
+        <Link href='mailto:dobariyadishant@gmail.com' isExternal>
           <IconButton _hover={{ bg: "transparent" }} aria-label='Github' bg="transparent" fontSize={["18px", "20px"]} icon={<Gmail />} />
         </Link>
 
-        <Link href='https://www.linkedin.com/in/arunima-barik/' isExternal>
+        <Link href='https://www.linkedin.com/in/dishant-dobariya-41468a29a/' isExternal>
           <IconButton _hover={{ bg: "transparent" }} aria-label='Linkedin' bg="transparent" fontSize={["18px", "20px"]} icon={<Linkedin />} />
         </Link>
 
-        <Link href='https://github.com/arunimabarik75/' isExternal>
+        <Link href='https://github.com/DISHANT1010/' isExternal>
           <IconButton _hover={{ bg: "transparent" }} aria-label='Github' bg="transparent" fontSize={["18px", "20px"]} icon={<Github />} />
         </Link>
 
-        <Link href='https://x.com/arunima_barik' isExternal>
+        <Link href='https://x.com/DobariyaDi7408' isExternal>
           <IconButton _hover={{ bg: "transparent" }} aria-label='Twitter' bg="transparent" fontSize={["18px", "20px"]} icon={<TwitterX />} />
         </Link>
       </HStack>
-
-      <Link href='https://github.com/arunimabarik75/Portfolio-Website' isExternal>
-        <Button mt={3} p={6} bg="blue.900" border="2px" borderRadius="lg" _hover={{ bg: "transparent", borderColor: "blue.900", textColor: "blue.900" }} fontFamily="workSans" fontSize={["lg", "lg", "xl"]} textColor="white">
-          <HStack spacing={2}>
-            <Star />
-            <Text>Star Me on Github</Text>
-          </HStack>
-        </Button>
-      </Link>
     </>
   )
 }

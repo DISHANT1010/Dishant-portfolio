@@ -13,7 +13,7 @@ const About = () => {
                 Projects
             </Text>
             <Text mb={[5, 5, 8]} align="center" fontFamily="workSans" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">
-                Made projects in the field of Data Science, Machine Learning and Web Development for college curriculum, internships and self learning
+            Built and deployed projects across Web Development integrating DevOps practices like CI/CD, containerization, and cloud infrastructure as part of college curriculum, internships, and self-learning
             </Text>
         </>
     )

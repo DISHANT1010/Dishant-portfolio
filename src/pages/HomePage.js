@@ -11,13 +11,10 @@ const About = () => {
     return (
         <>
             <Text fontFamily="paytone" fontSize={["2xl", "2xl", "3xl", "4xl"]} color="blue.900">
-                Arunima Barik
-            </Text>
-            <Text fontFamily="satisfy" fontSize={["2xl", "2xl", "3xl", "4xl"]} color="blue.900">
-                ( arunimabarik75 )
+                Dishant Dobariya
             </Text>
             <Text mb={[5, 5, 8]} align="center" fontFamily="workSans" fontSize={["xl", "xl", "2xl", "3xl"]} color="blue.900">
-                Aspiring software developer keen on learning new technologies and building projects that solve real-world problems
+            Aspiring DevOps engineer passionate about automating workflows, optimizing deployment pipelines, and leveraging modern tools to deliver reliable, scalable systems that solve real-world problems.
             </Text>
             <SocialMedia />
         </>
