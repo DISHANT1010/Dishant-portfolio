@@ -20,7 +20,7 @@ This repository contains my personal portfolio website.
 
 ➡️ Clone the repository to your local system
 ```bash
-git clone https://github.com/arunimabarik75/Portfolio-Website.git
+git clone https://github.com/DISHANT1010/Dishant-portfolio.git
 ```
   
 ➡️ Navigate to the directory
