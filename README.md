@@ -123,8 +123,4 @@ This creates a `build` directory with all the code. Deploy only this folder.
 
 This website has been deployed [here](https://arunima-barik-portfolio.vercel.app/)
 
-## References 
-
-[Ashutosh Hathidara's Portfolio Website](https://ashutoshhathidara.com/) 
-
 
